@@ -1,0 +1,14 @@
+and
+thisisanidentifier
+case else end
+false iMpLeMeNtAtIoN
+ArRAy
+12345 144.5648
+'string this is a string'
+'s' 'u' 's' amogus
++ - * /
+:= =
+<> <= >= < >
++= -= *= /=
+^ ; ,
+( ) [] {} (* *)
