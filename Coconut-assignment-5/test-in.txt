@@ -1,0 +1,13 @@
+PROGRAM HelloWorld;
+
+BEGIN
+    i := 0;
+    
+    IF i = 0 then writeln('i is 0') else writeln('i is not 0');
+    REPEAT
+        i := i + 1;
+        write('#'); write(i);
+        writeln(': Hello, world!');
+        write('Its here');
+    UNTIL i = 5;
+END.

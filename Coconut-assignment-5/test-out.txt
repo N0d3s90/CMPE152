@@ -1,0 +1,62 @@
+Tokens:
+PROGRAM : PROGRAM
+IDENTIFIER : HelloWorld
+SEMICOLON : ;
+BEGIN : BEGIN
+IDENTIFIER : i
+ASSIGN : :=
+INTEGER : 0
+SEMICOLON : ;
+IF : IF
+IDENTIFIER : i
+EQUAL : =
+INTEGER : 0
+THEN : then
+WRITELN : writeln
+LPAREN : (
+STRING : 'i is 0'
+RPAREN : )
+ELSE : else
+WRITELN : writeln
+LPAREN : (
+STRING : 'i is not 0'
+RPAREN : )
+SEMICOLON : ;
+REPEAT : REPEAT
+IDENTIFIER : i
+ASSIGN : :=
+IDENTIFIER : i
+PLUS_OP : +
+INTEGER : 1
+SEMICOLON : ;
+WRITE : write
+LPAREN : (
+CHARACTER : '#'
+RPAREN : )
+SEMICOLON : ;
+WRITE : write
+LPAREN : (
+IDENTIFIER : i
+RPAREN : )
+SEMICOLON : ;
+WRITELN : writeln
+LPAREN : (
+STRING : ': Hello, world!'
+RPAREN : )
+SEMICOLON : ;
+WRITE : write
+LPAREN : (
+STRING : 'Its here'
+RPAREN : )
+SEMICOLON : ;
+UNTIL : UNTIL
+IDENTIFIER : i
+EQUAL : =
+INTEGER : 5
+SEMICOLON : ;
+END : END
+PERIOD : .
+ : <EOF>
+
+Parse tree (Lisp format):
+(program PROGRAM HelloWorld ; (statement (compoundstatement BEGIN (statement (assignstatement (variable i) := (expr (integer_const 0)) ;)) (statement (ifstatement IF (expr (expr (variable i)) = (expr (integer_const 0))) then (statement (writeln writeln ( (string_const 'i is 0') ))) else (statement (writeln writeln ( (string_const 'i is not 0') ))) ;)) (statement (repeatstatement REPEAT (statement (assignstatement (variable i) := (expr (expr (variable i)) + (expr (integer_const 1))) ;)) (statement (write write ( (character_const '#') )) ;) (statement (write write ( (variable i) )) ;) (statement (writeln writeln ( (string_const ': Hello, world!') )) ;) (statement (write write ( (string_const 'Its here') )) ;) UNTIL (expr (expr (variable i)) = (expr (integer_const 5))) ;)) END .)) <EOF>)
